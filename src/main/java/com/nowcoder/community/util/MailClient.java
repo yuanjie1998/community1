@@ -29,7 +29,7 @@ public class MailClient {
             helper.setFrom(from);
             helper.setTo(to);
             helper.setSubject(subject);
-            helper.setText(content, true);
+            helper.setText(content,true);//,true 代表发送html格式的邮箱
             mailSender.send(helper.getMimeMessage());
         } catch (MessagingException e) {
             logger.error("发送邮件失败:" + e.getMessage());
